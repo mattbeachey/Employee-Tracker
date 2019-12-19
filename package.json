@@ -1,0 +1,29 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "CLI Employee Tracker",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattbeachey/Employee-Tracker.git"
+  },
+  "author": "Matt Beachey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattbeachey/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/mattbeachey/Employee-Tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.0.1",
+    "mysql": "^2.17.1",
+    "mysql2": "^2.0.2",
+    "sequelizer": "^1.1.3"
+  }
+}
