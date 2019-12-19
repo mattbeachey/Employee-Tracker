@@ -2,15 +2,15 @@
 
 
 USE employee_tracker_DB;
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('Accounts Receivable');
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('HR');
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('Operations');
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('R&D');
-INSERT INTO department (name)
+INSERT INTO departments (name)
 VALUES ('Strawberry');
 INSERT INTO roles (title, salary, department_id)
 VALUES ("Employee",1000000, 5);
