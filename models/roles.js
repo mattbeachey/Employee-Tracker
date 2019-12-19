@@ -1,4 +1,5 @@
-const sequelize = require("./config/connection")
+const Sequelize = require('sequelize');
+const sequelize = require ("../config/connection");
 
 const Roles = sequelize.define('roles', {
     // attributes
@@ -23,4 +24,7 @@ const Roles = sequelize.define('roles', {
     // options
 });
 
-module.exports = roles;
+Roles.sync();
+
+
+module.exports = Roles;

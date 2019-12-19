@@ -1,7 +1,8 @@
 //npm dependencies
-const sequelize = require ("./config/connection")
-const inquirer = require (inquirer)
-const consoleTable = require (console.table)
+const sequelize = require ("./config/connection");
+const inquirer = require ("inquirer")
+const consoleTable = require ("console.table")
+
 
 
 

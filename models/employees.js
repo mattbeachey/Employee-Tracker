@@ -1,4 +1,5 @@
-const sequelize = require ("./config/connection")
+const Sequelize = require('sequelize');
+const sequelize = require ("../config/connection");
 
 const Employees = sequelize.define('employees', {
     // attributes
@@ -27,4 +28,6 @@ const Employees = sequelize.define('employees', {
     // options
 });
 
-module.exports = employees;
+Employees.sync();
+
+module.exports = Employees;

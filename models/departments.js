@@ -1,4 +1,5 @@
-const sequelize = require("./config/connection")
+const Sequelize = require('sequelize');
+const sequelize = require ("../config/connection");
 
 const Departments = sequelize.define('departments', {
     // attributes
@@ -15,4 +16,7 @@ const Departments = sequelize.define('departments', {
     // options
 });
 
-module.exports = departments;
+Departments.sync();
+
+
+module.exports = Departments;
