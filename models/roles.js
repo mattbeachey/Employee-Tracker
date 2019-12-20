@@ -1,30 +1,31 @@
-const Sequelize = require('sequelize');
-const sequelize = require ("../config/connection");
-
-const Roles = sequelize.define('roles', {
+module.exports = function(sequelize, DataTypes) {
+const roles = sequelize.define("roles", {
     // attributes
     id: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
     },
     title: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     salary: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     department_id: {
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
     }
-}, {
+},
+{
     // options
-});
+    timestamps: false
+}
+);
 
-Roles.sync();
+return roles
 
-
-module.exports = Roles;
+};
