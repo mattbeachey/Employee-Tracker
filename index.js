@@ -219,11 +219,11 @@ function updateDb() {
 
                 console.log(data.userChoice, data.newID)
                 console.log(name.dataValues)
-                // db.employees.update({ role_id: `${data.newID}` } {where: {first_name: `${data.userChoice.id}`}})
+                db.employees.update({ role_id: `${data.newID}` }, {where: {first_name: `${data.userChoice.id}`}})
                 
-                // .then(function () {
-                //     console.log("updated employee's role ID")
-                // })
+                .then(function () {
+                    console.log("updated employee's role ID")
+                })
 
 
             });
