@@ -3,7 +3,7 @@ const db = require ("../models")
 
 const query = {
 
- viewAll(cb){
+  viewEmployees(cb){
     db.employees.findAll({}).then(function(res){
       const nameArray = []
       res.forEach(element => {
@@ -13,7 +13,6 @@ const query = {
       });
       cb(nameArray)
     })
-    
     
 }
 
