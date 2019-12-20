@@ -5,7 +5,7 @@ A CLI build in node.js manipulating a database using the Sequelize NPM. A user c
 
 ## Images/GIFs
 ![list of roles](./images/screenshot1.PNG)
-![gif of app in use](./images/demonstration-gif2)
+![gif of app in use](https://github.com/mattbeachey/Employee-Tracker/blob/master/images/demonstration-gif2.gif)
 
 
 ## Dependencies 
