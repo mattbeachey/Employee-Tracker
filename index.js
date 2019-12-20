@@ -148,7 +148,7 @@ function addEmployee() {
         {
             type: "input",
             name: "last_name",
-            message: "What is the Employee's Last Name?" 
+            message: "What is the Employee's Last Name?"
         },
         {
             type: "input",
@@ -181,7 +181,7 @@ function addRole() {
         {
             type: "input",
             name: "salary",
-            message: "What is this new role's salary?" 
+            message: "What is this new role's salary?"
         },
         {
             type: "input",
@@ -200,17 +200,32 @@ function addRole() {
 }
 
 function updateDb() {
-    query.viewEmployees(function (res) {
+    query.viewEmployees(function (res, name) {
         inquirer.prompt([
             {
                 type: "list",
                 name: "userChoice",
                 message: "Which employee would you like to update?",
                 choices: res
+            },
+            {
+                type: "input",
+                name: "newID",
+                message: "What is this employee's new role ID?",
             }
         ])
             .then(function (data) {
-                console.log("employee updated: " + data.userChoice)
+
+
+                console.log(data.userChoice, data.newID)
+                console.log(name.dataValues)
+                // db.employees.update({ role_id: `${data.newID}` } {where: {first_name: `${data.userChoice.id}`}})
+                
+                // .then(function () {
+                //     console.log("updated employee's role ID")
+                // })
+
+
             });
     })
 
